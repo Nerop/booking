@@ -30,13 +30,15 @@
     box-shadow: none;
 }
 #search {
-    height: 500px;
+    height: 300px;
     background-color: #1E656D;
 }
 #topOffers {
-    height: 500px;
+    height: auto;;
+    max-height: inherit;
     background-color: #EE693F;
     margin-top: 1%;
+    padding: 1%;
 }
 .social:hover {
     -webkit-transform: scale(1.1);
@@ -60,6 +62,7 @@
   margin-left: 2%;
 }
 #password-check-result {
+  font-size: 1em;
   color: red;
   margin-left: 70%;
 }
