@@ -17,6 +17,14 @@
     background-color: #1e656d;
     border-color: #1e656d;
 }
+#btn-personal-page {
+    background-color: #1e656d;
+    border-color: #1e656d;
+}
+#btn-exit {
+    background-color: #1e656d;
+    border-color: #1e656d;
+  }
 .btn:focus {
     outline: none;
     box-shadow: none;
@@ -46,4 +54,12 @@
 }
 .social-networks {
     list-style-type: none;
+}
+#no-avatar-icon {
+  font-size: 4em;
+  margin-left: 2%;
+}
+#password-check-result {
+  color: red;
+  margin-left: 70%;
 }
