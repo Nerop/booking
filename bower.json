@@ -1,0 +1,10 @@
+{
+  "name": "ads-sunny",
+  "version": "1.7.9",
+  "authors": [
+    "puiul <karatistt@ukr.net>"
+  ],
+  "dependencies": {
+    "jquery": "^3.0.0"
+  }
+}

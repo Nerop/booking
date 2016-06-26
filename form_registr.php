@@ -22,7 +22,7 @@ mysql_query($insert_sql);
 
 
 /*$result=mysql_query("INSERT INTO User (first_neme, last_name, email, password) VALUES ($first_name, $last_name, $email, $password, )");*/
-if ($insert_sql=='true')
+if ($result=='true')
 {
     echo "Sign up";
 }

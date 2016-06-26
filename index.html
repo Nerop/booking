@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" xmlns="http://www.w3.org/1999/html">
 
 <head>
     <meta charset="utf-8">
@@ -12,7 +12,7 @@
     <link href="dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="dist/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-
+    <link href="bower.json">
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -62,23 +62,24 @@
 
                                     <!-- Modal content-->
                                     <div class="modal-content">
+                                        <form action="index.php" id="form" method="post">
                                         <div class="modal-header">
                                             <button type="button" class="close" data-dismiss="modal">&times;</button>
                                             <h4 class="modal-title">Добро пожаловать!</h4>
                                         </div>
                                         <div class="modal-body">
-                                            <input type="text" id="nameRegister" class="form-control input-sm chat-input" placeholder="Ваше имя" />
+                                            <input name="first_name" type="text" id="nameRegister" class="form-control input-sm chat-input" placeholder="Ваше имя" />
                                             </br>
-                                            <input type="text" id="surnameRegister" class="form-control input-sm chat-input" placeholder="Ваша фамилия" />
+                                            <input name="last_name" type="text" id="surnameRegister" class="form-control input-sm chat-input" placeholder="Ваша фамилия" />
                                             </br>
-                                            <input type="text" id="userNameRegister" class="form-control input-sm chat-input" placeholder="Логин" />
+                                            <input name="email" type="text" id="userNameRegister" class="form-control input-sm chat-input" placeholder="Ваш Email" />
                                             </br>
-                                            <input type="text" id="userPasswordRegister1" class="form-control input-sm chat-input" placeholder="Пароль" />
+                                            <input name="password" type="text" id="userPasswordRegister1" class="form-control input-sm chat-input" placeholder="Пароль" />
                                             </br>
-                                            <input type="text" id="userPasswordRegister2" class="form-control input-sm chat-input" placeholder="Повторите ввод пароля" />
+                                            <input name="repeat password" type="text" id="userPasswordRegister2" class="form-control input-sm chat-input" placeholder="Повторите ввод пароля" />
                                             </br>
                                             <p id="password-check-result"></p>
-                                            <div class="avatarPicker">
+                                                                                        <div class="avatarPicker">
                                                 <div class="labelChoice">
                                                     <label class="control-label">Выберите аватар:</label>
                                                 </div>
@@ -87,9 +88,10 @@
                                             </div>
                                         </div>
                                         <div class="modal-footer">
-                                            <button type="button" class="btn btn-default" id="reg-button">Зарегистрироваться</button>
-                                            <button type="button" class="btn btn-danger" data-dismiss="modal">Закрыть</button>
+                                            <button type="submit" class="btn btn-default" id="reg-button">Зарегистрироваться</button>
+                                            <button type="button" class="btn btn-danger" data-dismiss="modal">Закрыть</button
                                         </div>
+                                        </form>
                                     </div>
 
                                 </div>
@@ -107,6 +109,7 @@
                                             <button type="button" class="close" data-dismiss="modal">&times;</button>
                                             <h4 class="modal-title">Добро пожаловать!</h4>
                                         </div>
+                                        <form action="" method="post" id="">
                                         <div class="modal-body">
                                             <input type="text" id="userNameLogin" class="form-control input-sm chat-input" placeholder="Логин" />
                                             </br>
@@ -114,9 +117,10 @@
                                             </br>
                                         </div>
                                         <div class="modal-footer">
-                                            <button type="button" class="btn btn-default">Войти</button>
+                                            <button type="submit" class="btn btn-default">Войти</button>
                                             <button type="button" class="btn btn-danger" data-dismiss="modal">Закрыть</button>
                                         </div>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
