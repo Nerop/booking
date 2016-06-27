@@ -1,5 +1,3 @@
-
-
 $(document).ready(function() {
     var logged = false;
     var jqxhr = $.getJSON( "top8-hotels.json", function() {
