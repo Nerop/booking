@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>BookMeNow!</title>
+
+    <!-- Bootstrap -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="dist/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+
+    <script src="src/js/script.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="cotainer" id="mainView">
+        <div class="row">
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <!--Лого-->
+                        <div class="navbar-left glyphicon glyphicon-send" id="logo"></div>
+                        <div class="navbar-brand" id="site-name">BookMeNow!</div>
+                    </div>
+                    <!--Навигация-->
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#">Главная</a></li>
+                            <li><a href="#">О нас</a></li>
+                            <li><a href="#">Помощь</a></li>
+                            <li><a href="#">Контакты</a></li>
+                            <!--<li><button type="button" id='check'>check</button></li>-->
+                        </ul>
+                        <!--Авторизация-->
+                        <ul class="nav navbar-nav navbar-right">
+                            <button type="button" class="btn btn-info btn-lg" id="btn-personal-page"><span class="glyphicon glyphicon-home"></span> Мой кабинет</button>
+                            <button type="button" class="btn btn-info btn-lg" id="btn-exit"><span class="glyphicon glyphicon-arrow-left"></span> Выйти</button>
+                            <button type="button" class="btn btn-info btn-lg" id="btn-register" data-toggle="modal" data-target="#myModalRegistration"><span class="glyphicon glyphicon-user"></span> Зарегистрироваться</button>
+                            <!-- Modal -->
+                            <div id="myModalRegistration" class="modal fade" role="dialog">
+                                <div class="modal-dialog">
+
+                                    <!-- Modal content-->
+                                    <div class="modal-content">
+                                        <form action="index.php" id="form" method="post">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            <h4 class="modal-title">Добро пожаловать!</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <input type="text" id="nameRegister" class="form-control input-sm chat-input" placeholder="Ваше имя" />
+                                            </br>
+                                            <input type="text" id="surnameRegister" class="form-control input-sm chat-input" placeholder="Ваша фамилия" />
+                                            </br>
+                                            <input type="text" id="userNameRegister" class="form-control input-sm chat-input" placeholder="Логин" />
+                                            </br>
+                                            <input type="password" id="userPasswordRegister1" class="form-control input-sm chat-input" placeholder="Пароль" />
+                                            </br>
+                                            <input type="password" id="userPasswordRegister2" class="form-control input-sm chat-input" placeholder="Повторите ввод пароля" />
+                                            </br>
+                                            <p id="password-check-result"></p>
+                                            <div class="avatarPicker">
+                                                <div class="labelChoice">
+                                                    <label class="control-label">Выберите аватар:</label>
+                                                </div>
+                                                <i class="fa fa-user" id="no-avatar-icon" aria-hidden="true"></i>
+                                                <p>Не больше 1.5мб и размер 250х250</p>
+                                                <input id="input-1a" type="file" class="file" data-show-preview="false">
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="submit" class="btn btn-default" id="reg-button">Зарегистрироваться</button>
+                                            <button type="button" class="btn btn-danger" data-dismiss="modal">Закрыть</button>
+                                        </div>
+                                        </form>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            <button type="button" class="btn btn-info btn-lg" id="btn-login" data-toggle="modal" data-target="#myModalSignIn"><span class="glyphicon glyphicon-log-in"></span> Войти</button>
+                            <!-- Modal -->
+                            <div id="myModalSignIn" class="modal fade" role="dialog">
+                                <div class="modal-dialog">
+
+                                    <!-- Modal content-->
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            <h4 class="modal-title">Добро пожаловать!</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <input type="text" id="userNameLogin" class="form-control input-sm chat-input" placeholder="Логин" />
+                                            </br>
+                                            <input type="password" id="userPasswordLogin" class="form-control input-sm chat-input" placeholder="Пароль" />
+                                            </br>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default">Войти</button>
+                                            <button type="button" class="btn btn-danger" data-dismiss="modal">Закрыть</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <div class="container" id="search">
+        <div class="row">
+            <!--<button type="button" id="change">Change</button>-->
+        </div>
+    </div>
+
+    <div class="container" id="topOffers">
+        <div class="row" id ="row-top-offers">
+
+        </div>
+    </div>
+
+    <div class="container text-center">
+        <hr />
+        <div class="row">
+            <div class="col-lg-12">
+                <ul class="nav nav-pills nav-justified">
+                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#">Помощь</a></li>
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="/">© 2016 BookMeNow! Company</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <li class="social-networks">
+                    <a href="https://www.facebook.com/"><i class="fa fa-facebook-square fa-3x social"></i></a>
+                    <a href="https://vk.com"><i class="fa fa-vk fa-3x social"></i></a>
+                </li>
+            </div>
+        </div>
+        <hr>
+
+    </div>
+
+
+
+    <script src="dist/js/bootstrap.min.js"></script>
+    <script src="dist/js//underscore.js"></script>
+    <script src="dist/js/backbone.js"></script>
+</body>
+
+</html>
