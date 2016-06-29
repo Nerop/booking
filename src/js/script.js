@@ -102,7 +102,7 @@ $(document).ready(function() {
         return logged;
     });
 
-
+    $("#ex2").slider({});
 
 
 

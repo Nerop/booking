@@ -30,11 +30,15 @@
     box-shadow: none;
 }
 #search {
-    height: 300px;
+    padding: 15px;
+    height: 40vh auto;
+    width:40vw auto;
     background-color: #1E656D;
+    color: white;
 }
 #topOffers {
-    height: auto;;
+    height: auto;
+    width: 40vw auto;
     max-height: inherit;
     background-color: #EE693F;
     margin-top: 1%;

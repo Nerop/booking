@@ -1,0 +1,43 @@
+.stylish-input-group .input-group-addon {
+    background: white !important;
+}
+.stylish-input-group .form-control {
+    border-right: 0;
+    box-shadow: 0 0 0;
+    border-color: #ccc;
+}
+.stylish-input-group button {
+    border: 0;
+    background: transparent;
+}
+.settlement-period {
+    margin-top: 1%;
+    margin-left: 3%;
+}
+#search-field {
+    width: 100%;
+}
+#amount-of-rooms {
+    width: 5%;
+}
+#amount-of-stars {
+    width: 5%;
+    margin-left: 10%;
+}
+#amounts {
+    display: flex;
+    position: relative;
+    margin-left: 2%;
+}
+@media screen and (min-width: 100px) and (max-width: 450px) {
+    #search-field {
+        width: 90vw;
+    }
+    #amount-of-stars {
+        margin-left: 100px;
+    }
+    #price-slider {
+        display: flex !important;
+        width: 35vh !important;
+    }
+}
