@@ -13,22 +13,34 @@
     background-color: #1e656d;
     border-color: #1e656d;
 }
+#btn-register:hover{
+    background-color: #339999;
+}
 #btn-login {
     background-color: #1e656d;
     border-color: #1e656d;
+}
+#btn-login:hover{
+    background-color: #339999;
 }
 #btn-personal-page {
     background-color: #1e656d;
     border-color: #1e656d;
 }
+#btn-personal-page:hover{
+    background-color: #339999;
+}
 #btn-exit {
     background-color: #1e656d;
     border-color: #1e656d;
   }
-.btn:focus {
+#btn-exit:hover{
+    background-color: #339999;
+}
+/*.btn:focus {
     outline: none;
     box-shadow: none;
-}
+}*/
 #search {
     padding: 15px;
     height: 40vh auto;

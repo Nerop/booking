@@ -78,11 +78,15 @@ $(document).ready(function() {
         var password1 = document.getElementById('userPasswordRegister1').value;
         var password2 = document.getElementById('userPasswordRegister2').value;
 
-        if (password1 != password2) {
-            $('#password-check-result').html('Passwords are different!');
-        } else if (!password1 && !password2) {
+        if (password1.length < 3){
+            $('#password-check-result').html('Password must be longer than 3 symbols!');
+        }
+         else if (!password1 && !password2) {
             $('#password-check-result').html('Enter password!');
-        } else {
+        } else if (password1 != password2) {
+            $('#password-check-result').html('Passwords are different!');
+        }
+        else {
             $('#password-check-result').html('Successful');
             $('#btn-login').hide();
             $('#btn-register').hide();

@@ -11,8 +11,7 @@
     background: transparent;
 }
 .settlement-period {
-    margin-top: 1%;
-    margin-left: 3%;
+    margin-top: 2%;
 }
 #search-field {
     width: 100%;
@@ -22,12 +21,29 @@
 }
 #amount-of-stars {
     width: 5%;
-    margin-left: 10%;
+    margin-left: 4%;
 }
 #amounts {
     display: flex;
     position: relative;
     margin-left: 2%;
+}
+#price-slider{
+    margin: 3% 0 0 3%;
+}
+#btn-search {
+    background-color: #EE693F;
+    border-color: #EE693F;
+    margin-left: 35%;
+}
+#btn-search:hover{
+    background-color: #f18765;
+}
+input.in-date{
+    color: black;
+}
+input.out-date{
+    color: black;
 }
 @media screen and (min-width: 100px) and (max-width: 450px) {
     #search-field {
@@ -39,5 +55,11 @@
     #price-slider {
         display: flex !important;
         width: 35vh !important;
+    }
+    #btn-register{
+        font-size: 1em;
+    }
+    #btn-login{
+        font-size: 1em;
     }
 }

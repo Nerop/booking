@@ -75,7 +75,7 @@
                                                 </br>
                                                 <input type="text" id="surnameRegister" class="form-control input-sm chat-input" placeholder="Ваша фамилия" />
                                                 </br>
-                                                <input type="text" id="userNameRegister" class="form-control input-sm chat-input" placeholder="Логин" />
+                                                <input type="text" id="userNameRegister" class="form-control input-sm chat-input" placeholder="Email" />
                                                 </br>
                                                 <input type="password" id="userPasswordRegister1" class="form-control input-sm chat-input" placeholder="Пароль" />
                                                 </br>
@@ -136,20 +136,20 @@
     <div class="container" id="search">
         <div class="row">
             <!--<button type="button" id="change">Change</button>-->
-            <div class="col-xs-6 col-sm-6 col-md-6 col-sm-offset-3">
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-sm-offset-3">
                 <div id="imaginary_container">
                     <div class="input-group stylish-input-group" id="search-field">
                         <input type="text" class="form-control" placeholder="Название отеля, местоположение...">
                     </div>
                     <div class="settlement-period">
                         <label for="in-date">Дата заезда</label>
-                        <input type="text" class="in-date" placeholder="ГГГГ-ММ-ДД">
+                        <input type="date" class="in-date">
                         <label for="out-date">Дата выезда</label>
-                        <input type="text" class="out-date" placeholder="ГГГГ-ММ-ДД">
+                        <input type="date" class="out-date">
                     </div>
                     <div class="container">
                         <div class="row" id="amounts">
-                            <div class="form-group" id="amount-of-rooms">
+                            <div class="form-group" id="amount-of-rooms" data-width="fit">
                                 <label for="filter">Номеров</label>
                                 <select class="form-control">
                                     <option value="0" selected>1</option>
@@ -159,7 +159,7 @@
                                     <option value="4">5</option>
                                 </select>
                             </div>
-                            <div class="form-group" id="amount-of-stars">
+                            <div class="form-group" id="amount-of-stars" data-width="fit">
                                 <label for="filter">Звезд</label>
                                 <select class="form-control">
                                     <option value="0" selected>1</option>
@@ -177,8 +177,10 @@
                                 <b>€ 1000</b>
                             </div>
                         </div>
+                        <div class="row">
+                            <button type="button" class="btn btn-info btn-lg"  id="btn-search">Искать!</button>
+                        </div>
 
-                        <button type="submit" name="button" id="btn-search">Искать!</button>
                     </div>
 
                 </div>
