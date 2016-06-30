@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="src/css/index_style.css">
     <link rel="stylesheet" href="src/css/search_style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/7.1.0/css/bootstrap-slider.css">
+    <link href="bower.json">
+    <link href="bower_components/jquery/dist/jquery.js">
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/7.1.0/bootstrap-slider.js"></script>
@@ -65,21 +67,21 @@
 
                                     <!-- Modal content-->
                                     <div class="modal-content">
-                                        <form action="index.php" id="form" method="post">
+                                        <form action="registration_window.php" id="form" method="post">
                                             <div class="modal-header">
                                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                                                 <h4 class="modal-title">Добро пожаловать!</h4>
                                             </div>
                                             <div class="modal-body">
-                                                <input type="text" id="nameRegister" class="form-control input-sm chat-input" placeholder="Ваше имя" />
+                                                <input name="first_name" type="text" id="nameRegister" class="form-control input-sm chat-input" placeholder="Ваше имя" />
                                                 </br>
-                                                <input type="text" id="surnameRegister" class="form-control input-sm chat-input" placeholder="Ваша фамилия" />
+                                                <input name="last_name" type="text" id="surnameRegister" class="form-control input-sm chat-input" placeholder="Ваша фамилия" />
                                                 </br>
-                                                <input type="text" id="userNameRegister" class="form-control input-sm chat-input" placeholder="Email" />
+                                                <input name="email" type="text" id="userNameRegister" class="form-control input-sm chat-input" placeholder="Email" />
                                                 </br>
-                                                <input type="password" id="userPasswordRegister1" class="form-control input-sm chat-input" placeholder="Пароль" />
+                                                <input name="password" type="password" id="userPasswordRegister1" class="form-control input-sm chat-input" placeholder="Пароль" />
                                                 </br>
-                                                <input type="password" id="userPasswordRegister2" class="form-control input-sm chat-input" placeholder="Повторите ввод пароля" />
+                                                <input name="repeat password" type="password" id="userPasswordRegister2" class="form-control input-sm chat-input" placeholder="Повторите ввод пароля" />
                                                 </br>
                                                 <p id="password-check-result"></p>
                                                 <div class="avatarPicker">
