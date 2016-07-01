@@ -1,0 +1,23 @@
+{
+  "name": "bookmenow",
+  "description": "",
+  "main": "index.html",
+  "authors": [
+    "Владислав Сазонов <vladsaz@i.ua>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "1.11.3",
+    "bootstrap": "^3.3.6",
+    "font-awesome": "fontawesome#^4.6.3",
+    "bootstrap-slider": "*"
+  }
+}
