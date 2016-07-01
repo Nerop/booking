@@ -6,6 +6,8 @@ var csso = require('gulp-csso');
 var rename = require('gulp-rename');
 var prefix = require('gulp-autoprefixer');
 var uglify = require('gulp-uglifyjs');
+var filter = require('gulp-filter');
+var mainBowerFiles = require('gulp-main-bower-files');
 
 gulp.task('default', ['css', 'js'], function () {
     console.log('Build successful');
@@ -27,6 +29,32 @@ gulp.task('js', function () {
     .pipe(concat('script.min.js'))
     .pipe(uglify()) //compression js
     .pipe(gulp.dest('dist/js'));
+});
+
+gulp.task('bower', function() {
+    var filterJS = filter(['**/*.js'], { restore: true });
+    var filterCSS = filter(['**/*.css'], { restore: true });
+    return gulp.src('./bower.json')
+        .pipe(mainBowerFiles({
+            overrides: {
+                bootstrap: {
+                    main: [
+                        './dist/js/bootstrap.js',
+                        './dist/css/bootstrap.css',
+                        './dist/fonts/*.*'
+                    ]
+                }
+            }
+        }))
+        .pipe(filterJS)
+        .pipe(concat('libs.min.js'))
+        .pipe(uglify())
+        .pipe(filterJS.restore)
+        .pipe(filterCSS)
+        .pipe(csso())
+        .pipe(rename({suffix: '.min'}))
+        .pipe(filterCSS.restore)
+        .pipe(gulp.dest('dist/libs'));
 });
 
 gulp.task('watch', function() {
