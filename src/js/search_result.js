@@ -130,18 +130,32 @@ $(document).ready(function() {
       'price': '500$'
     }
   ];
-    var hotelContent;
+    var amountOfPages;
 
     //loading top 8 hotels
     function loadTopHotels() {
-        for (var i = 0; i < 8; i++) {
-                var div = '<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">' + '<div class="thumbnail">' + '<img src=' + jsonTop8[i].img + ' ' + 'alt="">' + '<div class="caption" id=topHotel' + i + '>' + '<h3><a href="#">' + jsonTop8[i].hotelName + "</a></h3>" + "<p>" + jsonTop8[i].description + "</p>" + "<p>" + jsonTop8[i].stars + "</p>" + "<p>" + jsonTop8[i].price + "</p>" + '</div>' + '</div>' + '</div>';
+        for (let i = 0; i < 16; i++) {
+                let div = '<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">' + '<div class="thumbnail">' + '<img src=' + jsonTop8[i].img + ' ' + 'alt="">' + '<div class="caption" id=topHotel' + i + '>' + '<h3><a href="#">' + jsonTop8[i].hotelName + "</a></h3>" + "<p>" + jsonTop8[i].description + "</p>" + "<p>" + jsonTop8[i].stars + "</p>" + "<p>" + jsonTop8[i].price + "</p>" + '</div>' + '</div>' + '</div>';
                 $('#row-top-offers').append(div);
             }
     }
     loadTopHotels();
 
-    console.log(jsonTop8.length);
+    function countPages() {
+        let left = jsonTop8.length % 16;
+        if (left !== 0) {
+            amountOfPages = Math.floor(jsonTop8.length / 16 + 1);
+        }
+        else {
+            amountOfPages = jsonTop8.length / 16;
+        }
+        for (let i = 0; i < amountOfPages; i++) {
+            let div = '<li><a href="#">'+ Number(i+1) +'</a></li>'
+            $('#pages-counter').append(div);
+        }
+    }
+    countPages();
+
     $('#btn-personal-page').hide();
     $('#btn-exit').hide();
 
@@ -175,14 +189,6 @@ $(document).ready(function() {
         $('#btn-exit').hide();
         logged = false;
         return logged;
-    });
-
-    $('#btn-search').click(function() {
-        $('#search').hide();
-        for (var i = 0; i < 8; i++) {
-                var div = '<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">' + '<div class="thumbnail">' + '<img src=' + jsonTop8[i].img + ' ' + 'alt="">' + '<div class="caption" id=topHotel' + i + '>' + '<h3><a href="#">' + jsonTop8[i].hotelName + "</a></h3>" + "<p>" + jsonTop8[i].description + "</p>" + "<p>" + jsonTop8[i].stars + "</p>" + "<p>" + jsonTop8[i].price + "</p>" + '</div>' + '</div>' + '</div>';
-                $('#row-top-offers').append(div);
-            }
     });
 
     $("#ex2").slider({});
