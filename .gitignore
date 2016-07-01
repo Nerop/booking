@@ -1,4 +1,5 @@
 # folder logs/
-logs/
-node_modules/
-bower_components/
+/logs/
+/node_modules/
+/bower_components/
+/dist/
