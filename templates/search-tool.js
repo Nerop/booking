@@ -1,0 +1,1 @@
+var searchToolTemplate = _.template("");

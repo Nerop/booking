@@ -14,13 +14,14 @@
     <link rel="stylesheet" href="../dist/css/bundle.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/7.1.0/css/bootstrap-slider.css">
     <link href="../bower.json">
+    <link rel="stylesheet" href="../src/css/hotel-page.css" media="screen" title="no title" charset="utf-8">
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="../bower_components/jquery/dist/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/7.1.0/bootstrap-slider.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="../src/js/search_result.js"></script>
+    <script src="../dist/js/script.min.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -132,20 +133,50 @@
             </nav>
         </div>
     </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <h1>Hotel_Name</h1>
+                <div class="hotel-description">
+                    <p>Desc goes here</p>
+                </div>
+                <div class="carousel slide article-slide" id="article-photo-carousel">
 
-    <div class="container" id="topOffers">
-        <div class="row" id="row-top-offers">
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner cont-slider">
 
-        </div>
-        <div class="container">
-            <div class="row" id="pages">
-                <ul class="pagination pagination-sm" id="pages-counter"></ul>
+                        <div class="item active">
+                            <img alt="" title="" src="http://placehold.it/200x300">
+                        </div>
+                        <div class="item">
+                            <img alt="" title="" src="http://placehold.it/200x300">
+                        </div>
+                        <div class="item">
+                            <img alt="" title="" src="http://placehold.it/200x300">
+                        </div>
+                        <div class="item">
+                            <img alt="" title="" src="http://placehold.it/200x300">
+                        </div>
+                    </div>
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li class="active" data-slide-to="0" data-target="#article-photo-carousel">
+                            <img alt="" src="http://placehold.it/250x180">
+                        </li>
+                        <li class="" data-slide-to="1" data-target="#article-photo-carousel">
+                            <img alt="" src="http://placehold.it/250x180">
+                        </li>
+                        <li class="" data-slide-to="2" data-target="#article-photo-carousel">
+                            <img alt="" src="http://placehold.it/250x180">
+                        </li>
+                        <li class="" data-slide-to="3" data-target="#article-photo-carousel">
+                            <img alt="" src="http://placehold.it/250x180">
+                        </li>
+                    </ol>
+                </div>
             </div>
         </div>
-
-
     </div>
-
     <div class="container text-center">
         <hr />
         <div class="row">

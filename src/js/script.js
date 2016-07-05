@@ -148,17 +148,24 @@ $(document).ready(function() {
     $('#reg-button').click(function() {
         var password1 = document.getElementById('userPasswordRegister1').value;
         var password2 = document.getElementById('userPasswordRegister2').value;
+        var userSurname = document.getElementById('surnameRegister').value;
+        var errorString = '';
 
         if (password1.length < 3){
-            $('#password-check-result').html('Password must be longer than 3 symbols!');
+            errorString += 'Password must be longer than 3 symbols!';
         }
-         else if (!password1 && !password2) {
-            $('#password-check-result').html('Enter password!');
-        } else if (password1 != password2) {
-            $('#password-check-result').html('Passwords are different!');
+        if (!password1 && !password2) {
+            errorString += 'Enter password!';
+        }
+        if (password1 != password2) {
+            errorString += 'Passwords are different!';
+        }
+        if (userSurname.length < 2 ){
+            errorString += 'Должно быть больше 2х символов';
+            console.log(userSurname.length);
         }
         else {
-            $('#password-check-result').html('Successful');
+            errorString += 'Successful';
             $('#btn-login').hide();
             $('#btn-register').hide();
             $('#btn-personal-page').show();
@@ -166,6 +173,7 @@ $(document).ready(function() {
             logged = true;
             return logged;
         }
+        $('#password-check-result').html(errorString);
     });
 
     $('#btn-exit').click(function() {

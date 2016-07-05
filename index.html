@@ -21,6 +21,8 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="dist/js/script.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -31,7 +33,7 @@
 </head>
 
 <body>
-    <div class="cotainer" id="mainView">
+    <div class="container" id="mainView">
         <div class="row">
             <nav class="navbar navbar-inverse">
                 <div class="container-fluid">
@@ -75,7 +77,7 @@
                                                 </br>
                                                 <input name="last_name" type="text" id="surnameRegister" class="form-control input-sm chat-input" placeholder="Ваша фамилия" />
                                                 </br>
-                                                <input name="email" type="text" id="userNameRegister" class="form-control input-sm chat-input" placeholder="Email" />
+                                                <input name="email" type="text" id="userEmailRegister" class="form-control input-sm chat-input" placeholder="Email" />
                                                 </br>
                                                 <input name="password" type="password" id="userPasswordRegister1" class="form-control input-sm chat-input" placeholder="Пароль" />
                                                 </br>
@@ -180,9 +182,7 @@
                         <div class="row">
                             <button type="button" class="btn btn-info btn-lg"  id="btn-search">Искать!</button>
                         </div>
-
                     </div>
-
                 </div>
             </div>
         </div>
