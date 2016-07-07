@@ -148,21 +148,48 @@ $(document).ready(function() {
     $('#reg-button').click(function() {
         var password1 = document.getElementById('userPasswordRegister1').value;
         var password2 = document.getElementById('userPasswordRegister2').value;
+        var userName = document.getElementById('nameRegister').value;
         var userSurname = document.getElementById('surnameRegister').value;
+        var userEmail = document.getElementById('userEmailRegister').value;
         var errorString = '';
+        var reLetters = /^[а-яА-Я]+$/;
+        var reEmail = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 
+        if(userName === ''){
+            errorString += 'Поле имени не может быть пустым! ';
+        }
+        if(!reLetters.test(userName)){
+            errorString += 'Имя может состоять только из букв!';
+        }
+        if(userName.length < 2){
+            errorString += 'Слишком короткое имя!';
+        }
+        if(userSurname === ''){
+            errorString += 'Поле фамилии не может быть пустым! ';
+        }
+        if(!reLetters.test(userSurname)){
+            errorString += 'Фамилия может состоять только из букв!';
+        }
+        if(userName.length < 2){
+            errorString += 'Слишком короткая фамилия!';
+        }
+        if(userEmail === ''){
+            errorString += 'Поле email не может быть пустым!';
+        }
+        if(!reEmail.test(userEmail)){
+            errorString += 'Email не является валидным!';
+        }
+        if (userEmail.length < 5){
+            errorString += 'Email должен быть длиннее 5 символов! ';
+        }
         if (password1.length < 3){
-            errorString += 'Password must be longer than 3 symbols!';
+            errorString += 'Пароль должен быть длиннее 3х символов! ';
         }
         if (!password1 && !password2) {
-            errorString += 'Enter password!';
+            errorString += 'Введите пароль! ';
         }
         if (password1 != password2) {
-            errorString += 'Passwords are different!';
-        }
-        if (userSurname.length < 2 ){
-            errorString += 'Должно быть больше 2х символов';
-            console.log(userSurname.length);
+            errorString += 'Пароли не совпадают! ';
         }
         else {
             errorString += 'Successful';
@@ -173,7 +200,8 @@ $(document).ready(function() {
             logged = true;
             return logged;
         }
-        $('#password-check-result').html(errorString);
+        //$('#password-check-result').html(errorString);
+        alert(errorString);
     });
 
     $('#btn-exit').click(function() {
