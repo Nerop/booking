@@ -1,0 +1,26 @@
+#main-container-help{
+    background-color: #1e656d !important;
+    color: white;
+}
+#btn-submit{
+    background-color: #EE693F;
+}
+.red{
+    color:red;
+    }
+.form-area
+{
+    background-color: #1e656d;
+	padding: 10px 40px 60px;
+	margin: 10px 0px 60px;
+	/*border: 1px solid white;*/
+	}
+#characterLeft {
+    color: white !important;
+}
+
+@media screen and (min-width: 100px) and (max-width: 450px) {
+    #btn-submit{
+        width: 100%;
+    }
+}
