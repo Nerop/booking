@@ -191,7 +191,7 @@ $(document).ready(function() {
         if (password1 != password2) {
             errorString += 'Пароли не совпадают! ';
         }
-        else {
+        else if(errorString === '') {
             errorString += 'Successful';
             $('#btn-login').hide();
             $('#btn-register').hide();
