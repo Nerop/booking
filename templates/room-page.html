@@ -176,12 +176,72 @@
                     <p>Тип номера</p>
                     <p>Цена: 100$</p>
                     <h3>Описание:</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 </div>
-                <button type="button" class="btn btn-primary" id="btn-proceed-to-rooms">Перейти к бронированию</button>
+                <button type="button" class="btn btn-primary" id="btn-proceed-to-rooms" data-toggle="modal" data-target="#booking-modal">Перейти к бронированию</button>
+                <!-- Modal -->
+                <div id="booking-modal" class="modal fade" role="dialog">
+                    <div class="modal-dialog modal-sm">
+
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <form action="booking-action.php" id="booking-form" method="post">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h3>Бронирование</h3>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <label for="sel1">Хочу жить в:</label>
+                                            <select class="form-control" id="sel1">
+                                                <option>Люксе</option>
+                                                <option>Стандарте</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label for="sel1">Расплачиваюсь:</label>
+                                            <select class="form-control" id="sel1">
+                                                <option>Visa</option>
+                                                <option>Mastercard</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    </br>
+
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <label for="in-date">Приезжаю:</label>
+                                            <input type="date" class="in-date">
+                                        </div>
+                                    </div>
+                                    </br>
+
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <label for="out-date">Уезжаю:</label>
+                                            <input type="date" class="out-date">
+                                        </div>
+                                    </div>
+                                </br>
+
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="sum">
+                                                <h4>Итого: 400$</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn btn-default" id="book-button">Забронировать</button>
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Закрыть</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

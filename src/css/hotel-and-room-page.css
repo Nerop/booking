@@ -64,6 +64,20 @@
 #btn-proceed-to-rooms{
     background-color: #EE693F;
 }
+#booking-form{
+    color:black;
+}
+#booking-chooser{
+    display: flex;
+    padding-left: 0px;
+}
+#booking-chooser button {
+    margin-right: 10px;
+}
+.sum{
+    margin-left: 60%;
+    display: flex;
+}
 @media screen and (min-width: 100px) and (max-width: 450px) {
     .carousel {
         width: 99%;
