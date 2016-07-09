@@ -1,0 +1,28 @@
+#personal-page-viewer{
+    padding: 10px;
+    background-color: #1e656d !important;
+    color: white;
+}
+.name-settings{
+    display: flex;
+}
+#icon-settings{
+    font-size: 2em;
+}
+.archieve-settings{
+    padding-top: 10px;
+}
+#accept-settings-changes{
+    background-color: #EE693F;
+    border-color: #EE693F;
+    margin: 10px 0 10px 0;
+    
+}
+#accept-settings-changes:hover{
+    background-color: #f18765;
+}
+@media screen and (min-width: 100px) and (max-width: 450px) {
+    #accept-settings-changes{
+        width: 100%;
+    }
+}
