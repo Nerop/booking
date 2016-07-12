@@ -1,10 +1,23 @@
 {
-  "name": "ads-sunny",
-  "version": "1.7.9",
+  "name": "bookmenow",
+  "description": "",
+  "main": "index.html",
   "authors": [
-    "puiul <karatistt@ukr.net>"
+    "Владислав Сазонов <vladsaz@i.ua>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
   ],
   "dependencies": {
-    "jquery": "^3.0.0"
+    "jquery": "1.11.3",
+    "bootstrap": "^3.3.6",
+    "font-awesome": "fontawesome#^4.6.3",
+    "bootstrap-slider": "*"
   }
 }

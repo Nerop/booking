@@ -23,6 +23,23 @@ else{
     $user_admin=0;
 }
 
+
+
+if(isset($_POST['enter'])) {
+    $e_first_name = $_POST["e_first_name"];
+    $e_password = $_POST["e_password"];
+
+    $query = mysql_query('SELECT * FROM user WHERE first_name = $e_first_name');
+
+
+    if ($user_date[password] == e_password) {
+        echo "ok";
+    }
+    else {
+        echo "noll";
+    }
+}
+
 $avatar='0';
 
 //$sth =$db->prepare($sql = 'SELECT * FROM user WHERE email=:email AND password=:password');

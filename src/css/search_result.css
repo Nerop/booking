@@ -1,0 +1,8 @@
+#pages {
+    padding-left: 85%;
+}
+@media screen and (min-width: 100px) and (max-width: 450px) {
+    #pages{
+        padding-left: 45%;
+    }
+}

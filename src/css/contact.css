@@ -1,0 +1,24 @@
+.phone-numbers{
+    display: flex;
+}
+.phone-numbers p{
+    margin-right: 50px;
+}
+#help-viewer{
+    padding-top: 10px;
+    background-color: #1e656d !important;
+    color: white;
+}
+#map{
+    /*width: 61.5vw;
+    height: 60vh;*/
+    width: 100%;
+    height: 350px;
+    margin-bottom: 10px;
+}
+@media screen and (min-width: 100px) and (max-width: 450px) {
+    #map{
+        width: 91vw;
+        height: 50vh;
+    }
+}
