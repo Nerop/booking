@@ -1,23 +1,12 @@
-#myNavbar{
-    background-color: #1e656d;
-    border-color: #1e656d;
-    color: white;
+#mainView {
+    padding-left: 19%;
+    padding-right: 19%;
 }
-.navbar-inverse {
-    background-color: #1e656d;
-    border-color: #1e656d;
-}
-#myNavbar a {
-    background-color: #1e656d;
-    color: white;
-}
-
 #logo {
     font-size: 3em;
     color: white;
 }
 #site-name {
-    color: white;
     margin-left: 0px !important;
 }
 #btn-register {
