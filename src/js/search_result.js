@@ -139,7 +139,7 @@ $(document).ready(function() {
                 $('#row-top-offers').append(div);
             }
     }
-    loadHotelsSearch();
+    //loadHotelsSearch();
 
     function countPages() {
         var left = jsonTop8.length % 16;
@@ -155,9 +155,4 @@ $(document).ready(function() {
         }
     }
     countPages();
-
-
-
-
-
 });
