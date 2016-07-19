@@ -140,8 +140,10 @@ $(document).ready(function() {
             }
     }
     loadTopHotels();
-
-    console.log(jsonTop8.length);
+    $("#search").html(searchTemplate);
+    $('#mainView').html(logoTemplate);
+    $('#login-block').html(userLoginTemplate);
+    $('.footer').html(footerTemplate);
     $('#btn-personal-page').hide();
     $('#btn-exit').hide();
 
@@ -223,6 +225,6 @@ $(document).ready(function() {
 
     $("#ex2").slider({});
 
-    $("#search").append(searchTemplate);
+
 
 });

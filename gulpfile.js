@@ -34,14 +34,14 @@ gulp.task('js', function () {
 gulp.task('bower', function() {
     var filterJS = filter(['**/*.js'], { restore: true });
     var filterCSS = filter(['**/*.css'], { restore: true });
-    return gulp.src('./bower.json')
+    return gulp.src('bower.json')
         .pipe(mainBowerFiles({
             overrides: {
                 bootstrap: {
                     main: [
                         './dist/js/bootstrap.js',
-                        './dist/css/bootstrap.css',
-                        './dist/fonts/*.*'
+                        './dist/css/bootstrap.css'
+                        //'./dist/fonts/*.*'
                     ]
                 }
             }
@@ -52,7 +52,7 @@ gulp.task('bower', function() {
         .pipe(filterJS.restore)
         .pipe(filterCSS)
         .pipe(csso())
-        .pipe(rename({suffix: '.min'}))
+        .pipe(rename('style.min.css'))
         .pipe(filterCSS.restore)
         .pipe(gulp.dest('dist/libs'));
 });
