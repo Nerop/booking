@@ -20,7 +20,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/7.1.0/bootstrap-slider.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="../dist/js/script.min.js"></script>
+    <script src="../dist/js/underscore.js"></script>
+    <script src="../dist/js/backbone.js"></script>
+    <!--<script src="../dist/js/script.min.js"></script>-->
+
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -133,33 +136,39 @@
         </div>
     </div>
 
-	<div class="container main-container admin-page">
+    <div class="container main-container admin-page">
         <div class="row">
             <div class="col-md-2 sidebar">
-    			<ul class="nav nav-pills nav-stacked">
-    				<li><a href="#">Пользователи</a></li>
-    				<li><a href="#">Отели</a></li>
-    				<li><a href="#">Номера</a></li>
-    				<li><a href="#">Заявки</a></li>
-    			</ul>
-    		</div>
-    		<div class="col-md-10 content">
+                <ul class="nav nav-pills nav-stacked">
+                    <li><a href="#">Пользователи</a></li>
+                    <li><a href="#">Отели</a></li>
+                    <li><a href="#">Номера</a></li>
+                    <li><a href="#">Заявки</a></li>
+                </ul>
+            </div>
+            <div class="col-md-10 content">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         Рабочая область
                     </div>
-                    <div class="panel-body">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        			    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-    				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </div>
+                    <table class="table table-striped custab object-holder">
+                        <thead>
+                            <a href="#" class="btn btn-primary btn-xs pull-right btn-add"><b>+</b> Добавить нового пользователя</a>
+                            <tr>
+                                <th>ID</th>
+                                <th>Имя</th>
+                                <th>Фамилия</th>
+                                <th>Email</th>
+                                <th>Пароль</th>
+                                <th>Кол-во броней</th>
+                                <th class="text-center">Действие</th>
+                            </tr>
+                        </thead>
+                    </table>
                 </div>
-    		</div>
+            </div>
         </div>
-	</div>
+    </div>
 
     <div class="container text-center">
         <hr />
@@ -184,6 +193,7 @@
         <hr>
 
     </div>
+    <script src="../src/js/main.js"></script>
 </body>
 
 </html>

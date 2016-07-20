@@ -131,7 +131,12 @@ $(document).ready(function() {
     }
   ];
     var hotelContent;
-
+    function initMap() {
+            let map = new google.maps.Map(document.getElementById('map'), {
+              center: {lat: 48.429135, lng: 35.038124},
+              zoom: 18
+            });
+    }
     //loading top 8 hotels
     function loadTopHotels() {
         for (var i = 0; i < 8; i++) {
@@ -146,6 +151,30 @@ $(document).ready(function() {
     $('.footer').html(footerTemplate);
     $('#btn-personal-page').hide();
     $('#btn-exit').hide();
+
+    $('#main-page').click(function() {
+        /*$('#topOffers').show();
+        $('#mainView').html(logoTemplate);
+        $("#search").html(searchTemplate);
+        $('#login-block').html(userLoginTemplate);
+        $('.footer').html(footerTemplate);*/
+    });
+
+    $('#about-us-page').click(function() {
+        $('#search').html(teamTemplate);
+        $('#topOffers').hide();
+    });
+
+    $('#help-page').click(function() {
+        $('#search').html(helpTemplate);
+        $('#topOffers').hide();
+    });
+
+    $('#contacts-page').click(function() {
+        $('#search').html(contactsTemplate);
+        setTimeout(initMap, 2000);
+        $('#topOffers').hide();
+    });
 
     $('#reg-button').click(function() {
         var password1 = document.getElementById('userPasswordRegister1').value;
