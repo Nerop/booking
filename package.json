@@ -12,16 +12,14 @@
   "author": "Vladyslav Sazonov",
   "license": "ISC",
   "devDependencies": {
-    "grunt": "^1.0.1",
-    "grunt-contrib-cssmin": "^1.0.1",
-    "grunt-contrib-uglify": "^1.0.1",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-concat": "^2.6.0",
     "gulp-csso": "^2.0.0",
     "gulp-filter": "^4.0.0",
     "gulp-main-bower-files": "^1.5.2",
     "gulp-rename": "^1.2.2",
-    "gulp-uglifyjs": "^0.6.2"
+    "gulp-uglifyjs": "git+https://github.com/mishoo/UglifyJS2.git#harmony",
+    "underscore": "^1.8.3"
   },
   "description": ""
 }
