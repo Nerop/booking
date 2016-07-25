@@ -68,7 +68,7 @@
 
                                     <!-- Modal content-->
                                     <div class="modal-content">
-                                        <form action="registration_window.php" id="form" method="post">
+                                        <form action="http://localhost/itcollege-02-16-booking/registration_window.php" method="post" enctype="multipart/form-data">
                                             <div class="modal-header">
                                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                                                 <h4 class="modal-title">Добро пожаловать!</h4>
@@ -91,7 +91,7 @@
                                                     </div>
                                                     <i class="fa fa-user" id="no-avatar-icon" aria-hidden="true"></i>
                                                     <p>Не больше 1.5мб и размер 250х250</p>
-                                                    <input id="input-1a" type="file" class="file" data-show-preview="false">
+                                                    <input name="avatar" id="input-1a" type="file" class="file" data-show-preview="false">
                                                 </div>
                                             </div>
                                             <div class="modal-footer">
@@ -112,19 +112,22 @@
 
                                     <!-- Modal content-->
                                     <div class="modal-content">
+									<form action="http://localhost/itcollege-02-16-booking/avtorizetion_window.php" id="form" method="post">
                                         <div class="modal-header">
                                             <button type="button" class="close" data-dismiss="modal">&times;</button>
                                             <h4 class="modal-title">Добро пожаловать!</h4>
                                         </div>
                                         <div class="modal-body">
-                                            <input type="text" id="userNameLogin" class="form-control input-sm chat-input" placeholder="Логин" />
+                                            <input name="email" type="email" id="userNameLogin" class="form-control input-sm chat-input" placeholder="email" />
                                             </br>
-                                            <input type="password" id="userPasswordLogin" class="form-control input-sm chat-input" placeholder="Пароль" />
+                                            <input name="password" type="password" id="userPasswordLogin" class="form-control input-sm chat-input" placeholder="Пароль" />
                                             </br>
                                         </div>
                                         <div class="modal-footer">
-                                            <button type="button" class="btn btn-default">Войти</button>
+										
+                                            <button type="submit" class="btn btn-default">Войти</button>
                                             <button type="button" class="btn btn-danger" data-dismiss="modal">Закрыть</button>
+										</form> 	
                                         </div>
                                     </div>
                                 </div>

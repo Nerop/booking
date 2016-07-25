@@ -2,7 +2,7 @@
 
 require_once 'db_connection.php';
 
-$last_name = trim($_POST["last_name"]);
+$last_name = trim($_POST["email"]);
 $password = trim($_POST["password"]);
 
 if (isset($check)){
@@ -14,10 +14,13 @@ $sth->execute([':last_name'=>$last_name, ':password'=>$password]);
 
 $sth=$sth->fetchAll(PDO::FETCH_OBJ);
 
-if (!$sth)
+if ($sth)
 {
-    echo "You must sign up";
-
+    header('Content-Type: text/html; charset=utf-8');
+    echo "Авторизирован";
+}else{
+    header('Content-Type: text/html; charset=utf-8');
+   echo "Неверно введен email либо пароль ";
 }
 /*else {
     session_start();
