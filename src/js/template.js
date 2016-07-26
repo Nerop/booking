@@ -59,21 +59,21 @@ var userLoginTemplate = _.template(`<button type="button" class="btn btn-info bt
 
         <!-- Modal content-->
         <div class="modal-content">
-            <form action="registration_window.php" id="form" enctype="multipart/form-data" method="post">
+            <form action="registration_window.php" id="regForm" enctype="multipart/form-data" method="post">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                     <h4 class="modal-title">Добро пожаловать!</h4>
                 </div>
                 <div class="modal-body">
-                    <input name="first_name" type="text" id="nameRegister" class="form-control input-sm chat-input" placeholder="Ваше имя" />
+                    <input name="first_name" type="text" id="nameRegister" class="form-control input-sm chat-input not-valid" placeholder="Ваше имя" />
                     </br>
-                    <input name="last_name" type="text" id="surnameRegister" class="form-control input-sm chat-input" placeholder="Ваша фамилия" />
+                    <input name="last_name" type="text" id="surnameRegister" class="form-control input-sm chat-input not-valid" placeholder="Ваша фамилия" />
                     </br>
-                    <input name="email" type="text" id="userEmailRegister" class="form-control input-sm chat-input" placeholder="Email" />
+                    <input name="email" type="text" id="userEmailRegister" class="form-control input-sm chat-input not-valid" placeholder="Email" />
                     </br>
-                    <input name="password" type="password" id="userPasswordRegister1" class="form-control input-sm chat-input" placeholder="Пароль" />
+                    <input name="password" type="password" id="userPasswordRegister1" class="form-control input-sm chat-input not-valid" placeholder="Пароль" />
                     </br>
-                    <input name="repeat password" type="password" id="userPasswordRegister2" class="form-control input-sm chat-input" placeholder="Повторите ввод пароля" />
+                    <input name="repeat password" type="password" id="userPasswordRegister2" class="form-control input-sm chat-input not-valid" placeholder="Повторите ввод пароля" />
                     </br>
                     <p id="password-check-result"></p>
                     <div class="avatarPicker">
@@ -108,13 +108,13 @@ var userLoginTemplate = _.template(`<button type="button" class="btn btn-info bt
                 <h4 class="modal-title">Добро пожаловать!</h4>
             </div>
             <div class="modal-body">
-                <input type="text" id="userNameLogin" class="form-control input-sm chat-input" placeholder="Email" />
+                <input type="text" id="userNameLogin" class="form-control input-sm chat-input not-valid" placeholder="Email" />
                 </br>
-                <input type="password" id="userPasswordLogin" class="form-control input-sm chat-input" placeholder="Пароль" />
+                <input type="password" id="userPasswordLogin" class="form-control input-sm chat-input not-valid" placeholder="Пароль" />
                 </br>
             </div>
             <div class="modal-footer">
-                <button type="submit" class="btn btn-default">Войти</button>
+                <button type="submit" class="btn btn-default" id="login-button">Войти</button>
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Закрыть</button>
             </div>
             </form>

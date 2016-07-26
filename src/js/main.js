@@ -33,8 +33,6 @@
     App.Views.Users = Backbone.View.extend({
         tagName: 'tbody',
 
-        //className: 'list-unstyled text-center',
-
         initialize: function() {
             this.collection.on('add', this.addOne, this);
         },
@@ -54,8 +52,6 @@
 
     App.Views.User = Backbone.View.extend({
         tagName: 'tr',
-
-        //className: 'user',
 
         template: _.template(`<td contenteditable="true" class="user-content" name="userID"><%= userID %></td>
         <td contenteditable="true" class="user-content" name="name"><%= name %></td>

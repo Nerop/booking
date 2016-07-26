@@ -82,12 +82,10 @@ h6.description{
 }
 .img-box a:hover li{
 	border-color: #fff;
-	color: #88C425;
 }
 
 a:hover{
     text-decoration:none;
-    color:#519548;
 }
 i.red{
     color:#BC0213;

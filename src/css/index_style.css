@@ -96,3 +96,6 @@
 .avatarPicker{
     color:black;
 }
+.not-valid{
+  border-color: red;
+}
