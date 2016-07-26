@@ -23,7 +23,7 @@
     "gulp-ignore": "^2.0.1",
     "gulp-main-bower-files": "^1.5.2",
     "gulp-rename": "^1.2.2",
-    "gulp-uglifyjs": "git+https://github.com/mishoo/UglifyJS2.git#harmony",
+    "gulp-uglifyjs": "^0.6.2",
     "gulp-util": "^3.0.7",
     "underscore": "^1.8.3"
   },
