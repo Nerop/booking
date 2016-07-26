@@ -4,8 +4,8 @@
     color: white;
 }
 .navbar-inverse {
-    background-color: #1e656d;
-    border-color: #1e656d;
+    background-color: #1e656d !important;
+    border-color: #1e656d !important;
 }
 #myNavbar a {
     background-color: #1e656d;
@@ -97,5 +97,5 @@
     color:black;
 }
 .not-valid{
-  border-color: red;
+  border-color: red !important;
 }
