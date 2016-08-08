@@ -17,7 +17,7 @@ if ($repeat_password==$password)
 
     if (!$sth) {
         $sql=$db->prepare("
-                            INSERT INTO user (id_user, first_name, last_name, password, email, avatar) 
+                            INSERT INTO user (id_user, first_name, last_name, password, email, avatar)
                             VALUES (null, :first_name, :last_name, :password, :email, :avatar)
                          ");
         $sql->bindParam(':first_name',$first_name);
